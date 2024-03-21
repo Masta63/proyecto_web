@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  </head>
+  <body class="font-[Poppins] h-screen">
+    <header class="bg-white py-2 border-b-2 border-gray-300">
+      <nav class="flex justify-between items-center w-[92%] mx-auto">
+        <div>
+          <img
+            class="w-16 cursor-pointer"
+            src="./img/icono.jfif"
+            alt="icono de la marca"
+          />
+        </div>
+        <div
+          class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-2"
+        >
+          <ul
+            class="flex md:flex-row flex-col md:items-center md:gap-[px-6] gap-6"
+          >
+            <li>
+              <a class="hover:text-gray-500" href="#">Tienda</a>
+            </li>
+            <li>
+              <a class="hover:text-gray-500" href="#">Contacto/Visitanos</a>
+            </li>
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+              >
+                <svg
+                  class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+              </div>
+              <input
+                type="text"
+                class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500"
+                placeholder="Buscar productos . . ."
+              />
+            </div>
+          </ul>
+        </div>
+        <div class="flex items-center">
+          <button class="flex text-black px-5 py-2 rounded-full items-center">
+            <img
+              class="w-7 mr-2 cursor-pointer"
+              src="./img/carrito.png"
+              alt="icono del carrito"
+            />
+          </button>
+          <ion-icon
+            onclick="onToggleMenu(this)"
+            name="menu"
+            class="text-3xl cursor-pointer md:hidden"
+          ></ion-icon>
+        </div>
+      </nav>
+    </header>
+    <main class="flex flex-col md:flex-row h-screen">
+      <aside class="md:w-3/12 md:flex md:flex-col mt-12 hidden md:block">
+        <h2 class="text-center">Categorias</h2>
+        <div class="py-4 overflow-y-auto mt-6">
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a
+                href="#"
+                class="w-full py-2 border-b-2 border-gray-300 flex items-center justify-center"
+              >
+                <span class="text-center">Categoria 1</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="w-full py-2 border-b-2 border-gray-300 flex items-center justify-center"
+              >
+                <span class="text-center">Categoria 2</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="w-full py-2 border-b-2 border-gray-300 flex items-center justify-center"
+              >
+                <span class="text-center">Categoria 3</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="w-full py-2 border-b-2 border-gray-300 flex items-center justify-center"
+              >
+                <span class="text-center">Categoria 4</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="w-full py-2 border-b-2 border-gray-300 flex items-center justify-center"
+              >
+                <span class="text-center text-gray-500 hover:text-gray-800"
+                  >Categoria 5</span
+                >
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <section class="w-full ml-4 md:w-9/12">
+        <div class="grid grid-cols-2 md:grid-cols-5 mt-12">
+          <div class="bg-white w-44">
+            <img
+              src="./img/batidor.jpeg"
+              alt="Batidor"
+              class="w-full h-32 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-lg font-medium mb-2">Batidor</h3>
+              <p class="text-gray-600 mb-4">Esté es el mejor batidor</p>
+              <span>$10.000</span>
+            </div>
+          </div>
+          <div class="bg-white w-44">
+            <img
+              src="./img/molde.jpeg"
+              alt="Molde"
+              class="w-full h-32 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-lg font-medium mb-2">Molde</h3>
+              <p class="text-gray-600 mb-4">Esté es el mejor molde</p>
+              <span>$15.000</span>
+            </div>
+          </div>
+          <div class="bg-white w-44">
+            <img
+              src="./img/molde.jpeg"
+              alt="Molde"
+              class="w-full h-32 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-lg font-medium mb-2">Molde</h3>
+              <p class="text-gray-600 mb-4">Esté es el mejor molde</p>
+              <span>$15.000</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+        const navLinks = document.querySelector(".nav-links");
+        function onToggleMenu(e) {
+          e.name = e.name === "menu" ? "close" : "menu";
+          navLinks.classList.toggle("top-[9%]");
+        }
+    </script>
+  </body>
+</html>
