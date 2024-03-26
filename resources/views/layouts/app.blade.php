@@ -15,9 +15,9 @@
             theme: {
                 extend: {
                     backgroundImage: {
-                        livingRoom: "url('assets/living-room.jpeg')",
-                        kitchen: "url('assets/kitchen.jpeg')",
-                        bathroom: "url('assets/bathroom.jpeg')",
+                        livingRoom: "url('{{ asset('assets/images/cafe.jpg') }}')",
+                        kitchen: "url('{{ asset('assets/images/producto.jpg') }}')",
+                        bathroom: "url('{{ asset('assets/images/fruta_descripcion2.jpg') }}')",
                     },
                 },
             },

@@ -4,7 +4,10 @@
 
 @section('content')
     <div class="container">
+
         <div class="flex h-[600px] justify-around">
+        <img src="{{ asset('assets/images/descripcion2.jpg') }}" alt="background login image">
+
             <div class="flex flex-col items-center justify-center">
                 <div class="text-2xl font-semibold uppercase mb-4">Credentials</div>
                 <form method="POST" action="{{ route('login') }}">
@@ -61,7 +64,6 @@
                     </div>
                 </form>
             </div>
-            <img src="{{ asset('assets/login-img.jpeg') }}" alt="background login image">
         </div>
     </div>
 @endsection

@@ -14,8 +14,8 @@ class DatabaseSeeder extends Seeder
     {
         \App\Models\User::factory()->create([
             'name' => 'Admin user',
-            'email' => 'admin@example.com',
-            'password' => 'SoyUnAdmin123',
+            'email' => 'admin@admin.com',
+            'password' => 'admin',
             'role' => 'admin',
         ]);
 
@@ -28,8 +28,8 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\User::factory()->create([
             'name' => 'User',
-            'email' => 'user@example.com',
-            'password' => 'SoyUnUser123',
+            'email' => 'user@user.com',
+            'password' => 'user',
             'role' => 'user',
         ]);
 

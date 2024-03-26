@@ -15,9 +15,9 @@
             theme: {
                 extend: {
                     backgroundImage: {
-                        livingRoom: "url('assets/living-room.jpeg')",
-                        kitchen: "url('assets/kitchen.jpeg')",
-                        bathroom: "url('assets/bathroom.jpeg')",
+                        livingRoom: "url('{{ asset('assets/images/cafe.jpg') }}')",
+                        kitchen: "url('{{ asset('assets/images/producto.jpg') }}')",
+                        bathroom: "url('{{ asset('assets/images/fruta_descripcion2.jpg') }}')",
                     },
                 },
             },
@@ -64,7 +64,7 @@
     </div>
     <!-- Container -->
     <footer class="h-[80px] flex justify-center items-center mt-4 bg-gray-700 font-bold text-slate-50">
-        <h4>Hecho con amor por los pibes ❤️</h4>
+        <h4>Produccion WEB ❤️</h4>
     </footer>
     @yield('scripts')
 </body>
