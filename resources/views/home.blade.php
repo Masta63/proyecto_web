@@ -1,5 +1,9 @@
 @extends('layouts.app')
 @section('content')
+<div class="div">
+    <!-- descripcion -->
+    @include('layouts.secciones.descripcion')
+</div>
     <div class="h-[580px] flex justify-around gap-x-4 mt-4">
         <!-- Banner -->
         <div
@@ -26,5 +30,9 @@
             </a>
         </div>
         <!-- Banner -->
+    </div>
+    <div>
+        <!-- apoyo -->
+        @include('layouts.secciones.apoyo')
     </div>
 @endsection

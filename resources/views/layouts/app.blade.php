@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@yield('title', 'Home')</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <link href="{{ asset('css/estilos.css') }}" rel="stylesheet" />    
     @yield('css')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -83,10 +84,11 @@
     </nav>
     <!-- Navbar -->
     <!-- Container -->
+
     <div class="container mx-auto min-h-screen">
         @yield('content')
     </div>
-
+    
     <!-- Container -->
     <footer class="h-[80px] flex justify-center items-center mt-4 bg-gray-700 font-bold text-slate-50">
         <h4>Hecho con amor por los pibes ❤️</h4>
