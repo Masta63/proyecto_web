@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Information')
+@section('title', 'Informacion')
 
 @section('content')
 <div class="flex justify-center items-center">
@@ -14,7 +14,7 @@
                 Producción web
             </h2>
             <p class="text-left uppercase font-bold text-lg">
-                Profesor: Fernando Gonzalo Gaitán
+               
             </p>
         </div>
         <div class="flex flex-col justify-center items-center mt-10">

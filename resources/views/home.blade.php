@@ -10,7 +10,6 @@
             </a>
         </div>
         <!-- Banner -->
-        <!-- Banner -->
         <div
             class="flex flex-col flex-1 items-center justify-end text-white py-6 bg-frutas bg-no-repeat bg-center bg-cover">
             <a href="{{ route('frutas') }}"
@@ -18,7 +17,6 @@
                 Frutas
             </a>
         </div>
-        <!-- Banner -->
         <!-- Banner -->
         <div
             class="flex flex-col flex-1 items-center justify-end text-white py-10 bg-verduras bg-no-repeat bg-center bg-cover">

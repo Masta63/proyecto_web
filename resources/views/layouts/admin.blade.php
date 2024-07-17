@@ -29,7 +29,7 @@
     <!-- Navbar -->
     <nav class="h-[80px] flex justify-between items-center px-10 shadow mb-4">
         <div aria-label="logo">
-            <a href="/">RUCULA STORE</a>
+            <a href="/">ORGANICA STORE</a>
         </div>
         <div class="flex items-center gap-x-4 pr-24" aria-label="navbar-menu">
             <ul class="flex gap-x-4">

@@ -9,7 +9,7 @@
         <img src="{{ asset('assets/images/descripcion2.jpg') }}" alt="background login image">
 
             <div class="flex flex-col items-center justify-center">
-                <div class="text-2xl font-semibold uppercase mb-4">Credentials</div>
+                <div class="text-2xl font-semibold uppercase mb-4">Inicie Sesion</div>
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
                     <div class="row mb-3">
@@ -42,22 +42,22 @@
                     <div class="flex items-center mb-4">
                         <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}
                             class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500">
-                        <label for="remember" class="ms-2 text-sm font-medium text-gray-900">{{ __('Remember Me') }}</label>
+                        <label for="remember" class="ms-2 text-sm font-medium text-gray-900">{{ __('Mantenerse conectado') }}</label>
                     </div>
                     <div class="flex flex-col">
                         <button type="submit"
                             class="uppercase text-white bg-slate-900 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">
-                            {{ __('Login') }}
+                            {{ __('Ingresar') }}
                         </button>
 
                         @if (Route::has('password.request'))
                             <div class="flex flex-col items-center">
                                 <a class="underline hover:text-slate-500" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
+                                    {{ __('Olvido su clave?') }}
                                 </a>
-                                <span>or</span>
+                                <span>o</span>
                                 <a class="underline hover:text-slate-500" href="{{ route('register') }}">
-                                    Sign up
+                                    Registrese
                                 </a>
                             </div>
                         @endif

@@ -29,7 +29,7 @@
     <!-- Navbar -->
     <nav class="h-[80px] flex justify-between items-center px-10 shadow mb-4">
         <div aria-label="logo">
-            <a href="/">RUCULA STORE</a>
+            <a href="/">ORGANICA STORE</a>
         </div>
         <div class="flex items-center gap-x-4" aria-label="navbar-menu">
             <ul class="flex gap-x-4">
@@ -45,7 +45,7 @@
                 <div class="relative flex">
                     <input type="search" id="search-product" name="search"
                         class="block w-full p-4 pr-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
-                        placeholder="Search products..." required />
+                        placeholder="Buscar Producto..." required />
                     <button type="submit" class="absolute inset-y-0 right-0 flex items-center pr-3 focus:outline-none">
                         <i class="ph ph-magnifying-glass text-blue-500 text-lg"></i>
                     </button>
@@ -86,6 +86,7 @@
     <div class="container mx-auto min-h-screen">
         @yield('content')
     </div>
+
     <!-- Container -->
     <footer class="h-[80px] flex justify-center items-center mt-4 bg-gray-700 font-bold text-slate-50">
         <h4>Hecho con amor por los pibes ❤️</h4>
