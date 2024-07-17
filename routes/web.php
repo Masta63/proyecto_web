@@ -18,17 +18,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/living-room', function () {
-    return Redirect::to('/products?category=living-room');
-})->name('livingRoom');
+Route::get('/cafe', function () {
+    return Redirect::to('/products?category=cafe');
+})->name('cafe');
 
-Route::get('/kitchen', function () {
-    return Redirect::to('/products?category=kitchen');
-})->name('kitchen');
+Route::get('/frutas', function () {
+    return Redirect::to('/products?category=frutas');
+})->name('frutas');
 
-Route::get('/bathroom', function () {
-    return Redirect::to('/products?category=bathroom');
-})->name('bathroom');
+Route::get('/verduras', function () {
+    return Redirect::to('/products?category=verduras');
+})->name('verduras');
 
 Route::get('/', function () {
     return view('home');

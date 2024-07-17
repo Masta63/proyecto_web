@@ -22,7 +22,7 @@
                 </div>
             </div>
         @endif
-        <div class="text-2xl font-semibold uppercase text-center mb-4">Create Product</div>
+        <div class="text-2xl font-semibold uppercase text-center mb-4">Crear Usuario</div>
         <div class="flex justify-center items-center">
             <form method="POST" action="{{ route('users.store') }}">
                 @csrf
@@ -30,7 +30,7 @@
                     <div>
                         <input id="name" type="name" value="{{ old('name') }}"
                             class="border border-gray-300 text-gray-900 text-sm focus:ring-slate-900 focus:border-slate-900 block w-full p-2.5"
-                            placeholder="Name" name="name" required autocomplete="new-name" autofocus>
+                            placeholder="Nombre" name="name" required autocomplete="new-name" autofocus>
                     </div>
                     <div>
                         <input id="email" type="email" value="{{ old('email') }}"
@@ -44,7 +44,7 @@
                             placeholder="Password" name="password" required autocomplete="new-password" autofocus>
                     </div>
                     <div>
-                        <label for="role" class="block mb-2 text-sm font-medium text-gray-900">Role</label>
+                        <label for="role" class="block mb-2 text-sm font-medium text-gray-900">Rol</label>
                         <select id="role" name="role"
                             class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                             <option value="admin">Admin</option>
@@ -55,11 +55,11 @@
                 <div class="flex justify-center mt-4 gap-x-4 mb-8">
                     <a href="{{ route('panel.users') }}"
                         class="uppercase text-slate-900 border-slate-900 border-2 hover:bg-slate-900 hover:text-white focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">
-                        {{ __('Cancel') }}
+                        {{ __('Cancelar') }}
                     </a>
                     <button type="submit"
                         class="uppercase text-white bg-slate-900 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">
-                        {{ __('Submit') }}
+                        {{ __('Añadir') }}
                     </button>
                 </div>
             </form>

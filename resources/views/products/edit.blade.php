@@ -43,12 +43,12 @@
                             <label for="category" class="block mb-2 text-sm font-medium text-gray-900">Category</label>
                             <select id="category" name="category"
                                 class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-                                <option {{ $product->category == 'living-room' ? 'selected' : '' }} value="living-room">
+                                <option {{ $product->category == 'cafe' ? 'selected' : '' }} value="cafe">
                                     Living
                                     room</option>
-                                <option {{ $product->category == 'kitchen' ? 'selected' : '' }} value="kitchen">Kitchen
+                                <option {{ $product->category == 'frutas' ? 'selected' : '' }} value="frutas">frutas
                                 </option>
-                                <option {{ $product->category == 'bathroom' ? 'selected' : '' }} value="bathroom">Bathroom
+                                <option {{ $product->category == 'verduras' ? 'selected' : '' }} value="verduras">verduras
                                 </option>
                             </select>
                         </div>

@@ -15,9 +15,9 @@
             theme: {
                 extend: {
                     backgroundImage: {
-                        livingRoom: "url('{{ asset('assets/images/cafe.jpg') }}')",
-                        kitchen: "url('{{ asset('assets/images/producto.jpg') }}')",
-                        bathroom: "url('{{ asset('assets/images/fruta_descripcion2.jpg') }}')",
+                        cafe: "url('{{ asset('assets/images/cafe.jpg') }}')",
+                        frutas: "url('{{ asset('assets/images/producto.jpg') }}')",
+                        verduras: "url('{{ asset('assets/images/fruta_descripcion2.jpg') }}')",
                     },
                 },
             },
@@ -33,10 +33,10 @@
         </div>
         <div class="flex items-center gap-x-4 pr-24" aria-label="navbar-menu">
             <ul class="flex gap-x-4">
-                <li><a href="/panel/products">Products</a></li>
+                <li><a href="/panel/products">Productos</a></li>
                 @if (auth()->check() &&
                         auth()->user()->isAdmin())
-                    <li><a href="/panel/users">Users</a></li>
+                    <li><a href="/panel/users">Usuarios</a></li>
                 @endif
             </ul>
         </div>

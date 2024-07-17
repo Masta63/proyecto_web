@@ -19,23 +19,23 @@
         @endif
         <a class="ml-auto w-64 uppercase text-center text-white bg-slate-900 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2"
             href="{{ route('users.create') }}">
-            {{ __('Add User') }}
+            {{ __('Agregar Usuario') }}
         </a>
         <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table class="w-full text-sm text-left rtl:text-right text-gray-500">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                     <tr class="text-center">
                         <th scope="col" class="px-6 py-3">
-                            Name
+                            Nombre
                         </th>
                         <th scope="col" class="px-6 py-3">
                             Email
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Role
+                            Rol
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Action
+                            acción
                         </th>
                     </tr>
                 </thead>

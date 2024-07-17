@@ -15,9 +15,9 @@
             theme: {
                 extend: {
                     backgroundImage: {
-                        livingRoom: "url('{{ asset('assets/images/cafe.jpg') }}')",
-                        kitchen: "url('{{ asset('assets/images/producto.jpg') }}')",
-                        bathroom: "url('{{ asset('assets/images/fruta_descripcion2.jpg') }}')",
+                        cafe: "url('{{ asset('assets/images/cafe.jpg') }}')",
+                        frutas: "url('{{ asset('assets/images/producto.jpg') }}')",
+                        verduras: "url('{{ asset('assets/images/fruta_descripcion2.jpg') }}')",
                     },
                 },
             },
@@ -33,16 +33,15 @@
         </div>
         <div class="flex items-center gap-x-4" aria-label="navbar-menu">
             <ul class="flex gap-x-4">
-                <li><a href="/">Home</a></li>
+                <li><a href="/">Inicio</a></li>
                 <!-- Dropdown -->
-                <li><a href="/products">Products</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/information">Information</a></li>
+                <li><a href="/products">Productos</a></li>
+                <li><a href="/contact">Contacto</a></li>
+                <li><a href="/information">Información</a></li>
             </ul>
             <!-- Search Input -->
             <form action="{{ route('products.index') }}" method="get" class="flex items-center">
-                <label for="search-product" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search
-                    products</label>
+                <label for="search-product" class="mb-2 text-sm font-medium text-gray-900 sr-only">Buscar Producto</label>
                 <div class="relative flex">
                     <input type="search" id="search-product" name="search"
                         class="block w-full p-4 pr-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"

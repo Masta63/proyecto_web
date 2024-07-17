@@ -5,22 +5,28 @@
 @section('content')
 <main class="flex flex-col md:flex-row">
     <aside class="md:w-5/12 md:flex md:flex-col mt-12 hidden md:block">
-        <h2 class="text-4xl">Categories</h2>
+        <h2 class="text-4xl">Categoria</h2>
         <div class="py-4 overflow-y-auto mt-2">
             <ul class="space-y-2">
                 <li>
-                    <a href="/products?category=living-room" class="w-full py-2 flex items-center hover:font-medium">
+                    <a href="/products?category=cafe" class="w-full py-2 flex items-center hover:font-medium">
                         <span class="text-center">Cafe</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/products?category=kitchen" class="w-full py-2 flex items-center hover:font-medium">
+                    <a href="/products?category=frutas" class="w-full py-2 flex items-center hover:font-medium">
                         <span class="text-center">Frutas</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/products?category=bathroom" class="w-full py-2 flex items-center hover:font-medium">
+                    <a href="/products?category=verduras" class="w-full py-2 flex items-center hover:font-medium">
                         <span class="text-center">Verduras</span>
+                    </a>
+                </li>
+                <li>
+                     <!-- resaltar -->
+                    <a href="/products?category?" class="w-full py-2 flex items-center hover:font-medium">
+                        <span class="text-center">Todo</span>
                     </a>
                 </li>
             </ul>
@@ -41,7 +47,8 @@
                 <form method="POST" action="{{ route('cart.store') }}" class="flex justify-center">
                     @csrf
                     <input type="hidden" name="product_id" value="{{ $product->id }}">
-                    <button type="submit" class="uppercase text-white bg-slate-900 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Add to cart</button>
+                    <button type="submit" class="uppercase text-white bg-slate-900 hover:bg-blue-800 focus:ring-4
+                     focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Añadir al carrito</button>
                 </form>
             </div>
             @endforeach
