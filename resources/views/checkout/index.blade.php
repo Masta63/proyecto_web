@@ -13,7 +13,7 @@
                             <tr>
                                 <th colspan="3" scope="row"
                                     class="px-6 py-4 font-bold text-center text-gray-900 whitespace-nowrap">
-                                    Resume
+                                    Detalle de la Orden
                                 </th>
                             </tr>
                             @foreach ($cart as $product)
@@ -60,34 +60,34 @@
                         </div>
                     </div>
                 @endif
-                <div class="text-2xl font-semibold uppercase text-center mb-4">Checkout Information</div>
+                <div class="text-2xl font-semibold uppercase text-center mb-4">Información de la Orden</div>
                 <div class="flex justify-center items-center">
                     <div class="flex gap-x-4">
                         <div class="flex flex-col gap-y-4">
                             <div>
                                 <input id="name" type="text" value="{{ old('name') }}"
                                     class="border border-gray-300 text-gray-900 text-sm focus:ring-slate-900 focus:border-slate-900 block w-full p-2.5"
-                                    placeholder="Your name" name="name" required autocomplete="new-name" autofocus>
+                                    placeholder="Nombre" name="name" required autocomplete="new-name" autofocus>
                             </div>
                             <div>
                                 <input id="address" type="text" value="{{ old('address') }}"
                                     class="border border-gray-300 text-gray-900 text-sm focus:ring-slate-900 focus:border-slate-900 block w-full p-2.5"
-                                    placeholder="Address" name="address" required autocomplete="new-address" autofocus>
+                                    placeholder="Direccion" name="address" required autocomplete="new-address" autofocus>
                             </div>
                             <div>
                                 <input id="city" type="text" value="{{ old('city') }}"
                                     class="border border-gray-300 text-gray-900 text-sm focus:ring-slate-900 focus:border-slate-900 block w-full p-2.5"
-                                    placeholder="City" name="city" required autocomplete="new-city" autofocus>
+                                    placeholder="Ciudad" name="city" required autocomplete="new-city" autofocus>
                             </div>
                             <div>
                                 <input id="zipcode" type="text" value="{{ old('zipcode') }}"
                                     class="border border-gray-300 text-gray-900 text-sm focus:ring-slate-900 focus:border-slate-900 block w-full p-2.5"
-                                    placeholder="Zipcode" name="zipcode" required autocomplete="new-zipcode" autofocus>
+                                    placeholder="Codigo Postal" name="zipcode" required autocomplete="new-zipcode" autofocus>
                             </div>
                             <div>
                                 <input id="phone" type="phone" value="{{ old('phone') }}"
                                     class="border border-gray-300 text-gray-900 text-sm focus:ring-slate-900 focus:border-slate-900 block w-full p-2.5"
-                                    placeholder="Phone number" name="phone" required autocomplete="new-phone" autofocus>
+                                    placeholder="Numerod e Telefono" name="phone" required autocomplete="new-phone" autofocus>
                             </div>
                         </div>
                     </div>
@@ -97,11 +97,11 @@
         <div class="flex justify-center mt-4 gap-x-4 mb-8">
             <a href="{{ route('cart.index') }}"
                 class="uppercase text-slate-900 border-slate-900 border-2 hover:bg-slate-900 hover:text-white focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">
-                {{ __('Cancel') }}
+                {{ __('Cancelar') }}
             </a>
             <button type="submit"
                 class="uppercase text-white bg-slate-900 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">
-                {{ __('Confirm') }}
+                {{ __('Confirmar') }}
             </button>
         </div>
     </form>

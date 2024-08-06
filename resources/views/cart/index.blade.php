@@ -76,7 +76,14 @@
                     to checkout</a>
             </div>
         @else
-            <div class="text-2xl font-semibold uppercase text-center mb-4">Your cart is empty</div>
+            <div class="text-2xl font-semibold uppercase text-center mb-4">El Carrito esta vacio!</div>
+            <!-- Nuevo botón para redirigir a la lista de productos -->
+            <div class="flex justify-center items-center ">
+                <a class="w-64 uppercase text-center text-white bg-slate-900 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5"
+                    href="{{ route('products.index') }}">
+                    {{ __('Ver productos') }}
+                </a>
+            </div>
         @endif
     </div>
 @endsection
