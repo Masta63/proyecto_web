@@ -64,7 +64,7 @@ class ProductController extends Controller
         ]);
         return redirect()
             ->route('panel.products')
-            ->with('status', 'Product created successfully!');
+            ->with('status', 'Producto creado exitosamente!');
     }
 
     /**
@@ -101,7 +101,7 @@ class ProductController extends Controller
         ]);
         return redirect()
             ->route('panel.products')
-            ->with('status', 'Product edit successfully!');
+            ->with('status', 'Producto actualizado exitosamente!');
     }
 
     public function confirmDestroy(Product $product)
@@ -118,6 +118,6 @@ class ProductController extends Controller
         $product->delete();
         return redirect()
             ->route('panel.products')
-            ->with('status', 'The product has been successfully removed.');
+            ->with('status', 'El producto fue eliminado exitosamente!');
     }
 }

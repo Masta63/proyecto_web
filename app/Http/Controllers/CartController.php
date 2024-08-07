@@ -12,14 +12,14 @@ class CartController extends Controller
      */
     public function index(Request $request)
     {
-        $cart = $request->session()->get('cart', []);
+        $cart = $request->session()->get('cart', []);//obtiene el carrito de la sesion si no existe crea un array vacio
 
         $totalPrice = 0;
         foreach ($cart as $product) {
             $totalPrice += $product['price'] * $product['quantity'];
         }
 
-        return view('cart.index', ['cart' => $cart, 'totalPrice' => $totalPrice]);
+        return view('cart.index', ['cart' => $cart, 'totalPrice' => $totalPrice]);//retorna la vista cart.index con los datos del carrito y el precio total
     }
 
     /**
@@ -40,7 +40,7 @@ class CartController extends Controller
 
             $request->session()->put('cart', $cart);
 
-            return redirect()->route('cart.index')->with('status', 'Product added to cart successfully');
+            return redirect()->route('cart.index')->with('status', 'Producto agregado con exito al carrito');
         } else {
             return redirect()->back();
         }
@@ -55,7 +55,7 @@ class CartController extends Controller
 
             $request->session()->put('cart', $cart);
 
-            return redirect()->route('cart.index')->with('status', 'Quantity Product updated to cart successfully');
+            return redirect()->route('cart.index')->with('status', 'Se actualizo la cantidad del producto en el carrito');
         } else {
             return redirect()->back();
         }
@@ -73,7 +73,7 @@ class CartController extends Controller
 
             $request->session()->put('cart', $cart);
 
-            return redirect()->route('cart.index')->with('status', 'Product removed from cart successfully');
+            return redirect()->route('cart.index')->with('status', 'Producto eliminado del carrito');
         } else {
             return redirect()->back();
         }
@@ -82,6 +82,6 @@ class CartController extends Controller
     public function emptyCart(Request $request)
     {
         $request->session()->forget('cart');
-        return redirect()->route('cart.index')->with('status', 'Cart emptied successfully');
+        return redirect()->route('cart.index')->with('status', 'Carrito vaciado');
     }
 }

@@ -35,7 +35,7 @@ class UserController extends Controller
         ]);
         return redirect()
             ->route('panel.users')
-            ->with('status', 'User created successfully!');
+            ->with('status', 'Usuario creado exitosamente!');
     }
 
     /**
@@ -66,7 +66,7 @@ class UserController extends Controller
         ]);
         return redirect()
             ->route('panel.users')
-            ->with('status', 'User edit successfully!');
+            ->with('status', 'Usuario actualizado exitosamente!');
     }
 
     public function confirmDestroy(User $user)
@@ -83,6 +83,6 @@ class UserController extends Controller
         $user->delete();
         return redirect()
             ->route('panel.users')
-            ->with('status', 'The user has been successfully removed.');
+            ->with('status', 'El usuario fue eliminado exitosamente!');
     }
 }

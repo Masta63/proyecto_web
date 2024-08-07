@@ -69,11 +69,12 @@
             <div class="flex justify-end">
                 <a href="{{ route('cart.empty') }}"
                     class="uppercase text-slate-900 border-slate-900 border-2 hover:bg-slate-900 hover:text-white focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">
-                    {{ __('Empty cart') }}
+                    {{ __('Vaciar carrito') }}
                 </a>
                 <a href="{{ route('checkout.index') }}"
-                    class="uppercase text-white bg-slate-900 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Continue
-                    to checkout</a>
+                    class="uppercase text-white bg-slate-900 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">
+                    {{ __('Ir a Comprar') }}
+                </a>
             </div>
         @else
             <div class="text-2xl font-semibold uppercase text-center mb-4">El Carrito esta vacio!</div>

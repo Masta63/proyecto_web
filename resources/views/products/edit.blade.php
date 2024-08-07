@@ -33,13 +33,13 @@
                             <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Nombre</label>
                             <input id="name" type="name" value="{{ $product->name ?? old('name') }}"
                                 class="border border-gray-300 text-gray-900 text-sm focus:ring-slate-900 focus:border-slate-900 block w-full p-2.5"
-                                placeholder="Name" name="name" required autocomplete="new-name" autofocus>
+                                placeholder="Nombre" name="name" required autocomplete="new-name" autofocus>
                         </div>
                         <div>
                             <label for="description" class="block mb-2 text-sm font-medium text-gray-900">Descripción</label>
                             <textarea id="description" type="description" cols="4" rows="6"
                                 class="border border-gray-300 text-gray-900 text-sm focus:ring-slate-900 focus:border-slate-900 block w-full p-2.5"
-                                placeholder="Description" name="description" required autocomplete="new-description" autofocus>{{ trim($product->description ?? old('description')) }}</textarea>
+                                placeholder="Descripcion" name="description" required autocomplete="new-description" autofocus>{{ trim($product->description ?? old('description')) }}</textarea>
                         </div>
                         <div>
                             <label for="category" class="block mb-2 text-sm font-medium text-gray-900">Categoria</label>
@@ -64,7 +64,7 @@
                             <input id="quantity" type="number" min=0 max=99
                                 value="{{ $product->quantity ?? old('quantity') }}"
                                 class="border border-gray-300 text-gray-900 text-sm focus:ring-slate-900 focus:border-slate-900 block w-full p-2.5"
-                                placeholder="Quantity" name="quantity" required autocomplete="new-quantity" autofocus>
+                                placeholder="Cantidad" name="quantity" required autocomplete="new-quantity" autofocus>
                         </div>
                     </div>
                     {{-- //TODO: ver como subir imagen --}}
@@ -72,7 +72,7 @@
                         <img class="w-[287px] h-[287px]" src="{{ $product->image }}" alt="product image">
                         <input id="image" type="text" value="{{ $product->image ?? old('image') }}"
                             class="w-[287px] mt-4 border border-gray-300 text-gray-900 text-sm focus:ring-slate-900 focus:border-slate-900 block w-full p-2.5"
-                            placeholder="Image" name="image" required autocomplete="new-image" autofocus>
+                            placeholder="Imagen" name="image" required autocomplete="new-image" autofocus>
                     </div>
                 </div>
                 <div class="flex justify-center mt-4 gap-x-4 mb-8">
