@@ -24,7 +24,7 @@
         @endif
         <div class="text-2xl font-semibold uppercase text-center mb-4">Editar Producto</div>
         <div class="flex justify-center items-center">
-            <form method="POST" action="{{ route('products.update', $product) }}">
+            <form method="POST" action="{{ route('products.update', $product) }}" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <div class="flex gap-x-4">
@@ -69,10 +69,10 @@
                     </div>
                     {{-- //TODO: ver como subir imagen --}}
                     <div class="flex flex-col">
-                        <img class="w-[287px] h-[287px]" src="{{ $product->image }}" alt="product image">
-                        <input id="image" type="text" value="{{ $product->image ?? old('image') }}"
+                        <img class="w-[287px] h-[287px]" src="{{ asset('/assets/images/' . $product->image) }}" alt="product image">
+                        <input id="image" type="file"
                             class="w-[287px] mt-4 border border-gray-300 text-gray-900 text-sm focus:ring-slate-900 focus:border-slate-900 block w-full p-2.5"
-                            placeholder="Imagen" name="image" required autocomplete="new-image" autofocus>
+                            name="image" required autocomplete="new-image" autofocus>
                     </div>
                 </div>
                 <div class="flex justify-center mt-4 gap-x-4 mb-8">

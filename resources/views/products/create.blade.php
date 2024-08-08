@@ -24,7 +24,7 @@
         @endif
         <div class="text-2xl font-semibold uppercase text-center mb-4">Añadir Producto</div>
         <div class="flex justify-center items-center">
-            <form method="POST" action="{{ route('products.store') }}">
+            <form method="POST" action="{{ route('products.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="flex flex-col gap-y-4">
                     <div>
@@ -59,9 +59,12 @@
                             class="border border-gray-300 text-gray-900 text-sm focus:ring-slate-900 focus:border-slate-900 block w-full p-2.5"
                             placeholder="Cantidad" name="quantity" required autocomplete="new-quantity" autofocus>
                     </div>
-                    <input id="image" type="text" value="{{ old('image') }}"
-                        class="w-full border border-gray-300 text-gray-900 text-sm focus:ring-slate-900 focus:border-slate-900 block w-full p-2.5"
-                        placeholder="Imagen" name="image" required autocomplete="new-image" autofocus>
+                    <div class="flex flex-col">
+                        
+                        <input id="image" type="file"
+                            class="w-[287px] mt-4 border border-gray-300 text-gray-900 text-sm focus:ring-slate-900 focus:border-slate-900 block w-full p-2.5"
+                            name="image" required autocomplete="new-image" autofocus>
+                    </div>
                 </div>
                 <div class="flex justify-center mt-4 gap-x-4 mb-8">
                     <a href="{{ route('panel.products') }}"

@@ -52,7 +52,7 @@
                     @foreach ($products as $product)
                         <tr class="odd:bg-white even:bg-gray-50 border-b">
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                                <img src={{ $product->image }} alt={{ $product->name }} class="w-full h-32 object-cover" />
+                                <img src="{{ asset('/assets/images/' . $product->image) }}" alt="{{ $product->name }}" class="w-full h-32 object-cover" />
                             </th>
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                                 {{ $product->name }}

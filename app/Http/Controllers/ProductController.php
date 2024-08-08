@@ -47,21 +47,29 @@ class ProductController extends Controller
     {
         $request->validate([
             'name' => 'required|max:50',
-            'image' => 'required',
+            'image' => 'nullable|file|mimes:jpeg,png,jpg,gif|max:2048',
             'description' => 'required|max:200',
             'category' => 'required',
-            'price' => 'required',
-            'quantity' => 'required',
+            'price' => 'required|numeric',
+            'quantity' => 'required|integer',
         ]);
+
+        $imageName = null;
+        if ($request->hasFile('image')) {
+            $imageName = time().'.'.$request->image->extension();
+            $request->image->move(public_path('/assets/images'), $imageName);
+        }
 
         Product::create([
             'name' => $request->name,
-            'image' => $request->image,
             'description' => $request->description,
             'category' => $request->category,
             'price' => $request->price,
             'quantity' => $request->quantity,
+            'image' => $imageName,
         ]);
+
+        
         return redirect()
             ->route('panel.products')
             ->with('status', 'Producto creado exitosamente!');
@@ -91,6 +99,12 @@ class ProductController extends Controller
             'quantity' => 'required',
         ]);
 
+        $imageName = null;
+        if ($request->hasFile('image')) {
+            $imageName = time().'.'.$request->image->extension();
+            $request->image->move(public_path('/assets/images'), $imageName);
+        }
+
         $product->update([
             'name' => $request->name,
             'image' => $request->image,
@@ -99,6 +113,10 @@ class ProductController extends Controller
             'price' => $request->price,
             'quantity' => $request->quantity,
         ]);
+        if (isset($imageName)) {
+            $product->image = $imageName;
+            $product->save();
+        }
         return redirect()
             ->route('panel.products')
             ->with('status', 'Producto actualizado exitosamente!');
